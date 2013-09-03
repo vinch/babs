@@ -1,16 +1,16 @@
 {
-  "name": "babk",
+  "name": "babs",
   "version": "0.0.0",
   "description": "Bay Area Bike Share for mobile",
   "main": "index.coffee",
   "repository": {
     "type": "git",
-    "url": "ssh://git@github.com/vinch/babk.git"
+    "url": "ssh://git@github.com/vinch/babs.git"
   },
   "author": "Vincent Battaglia",
   "license": "BSD",
   "bugs": {
-    "url": "https://github.com/vinch/babk/issues"
+    "url": "https://github.com/vinch/babs/issues"
   },
   "dependencies": {
     "jade": "~0.34.1",
@@ -19,6 +19,7 @@
     "coffee-script": "~1.6.3",
     "express": "~3.3.5",
     "logule": "~2.0.0",
-    "connect-assets": "~2.5.2"
+    "connect-assets": "~2.5.2",
+    "request": "~2.27.0"
   }
 }
