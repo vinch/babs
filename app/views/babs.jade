@@ -31,18 +31,20 @@ html.no-js(lang='en')
         .distance {{prettyDistance distance}}
       .availabilities
         strong {{availableBikes}}
-        span  / {{totalDocks}}
+        span  / {{availableDocks}}
 
     script#station(type='template')
       .station
         h2 {{stationName}}
-        .map
+        a.map(href='http://maps.google.com?q={{latitude}},{{longitude}}', target='_blank')
+          img(src='http://maps.googleapis.com/maps/api/staticmap?center={{latitude}},{{longitude}}&zoom=16&size=290x120&scale=2&sensor=true')
+          span.pin
         .availabilities
           .bikes
             strong {{availableBikes}}
             |  available bikes
           .docks
-            strong {{availableDocks}}
+            span {{availableDocks}}
             |  available docks
 
 
