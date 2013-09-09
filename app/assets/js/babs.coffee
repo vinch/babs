@@ -85,10 +85,17 @@ class BABS.StationsListItemView extends Backbone.View
 
 class BABS.StationView extends Backbone.View
 
+  events: {
+    'click .back': 'back'
+  }
+
   render: ->
     template = Handlebars.compile $('#station').html()
     $(@el).html template @model.toJSON()
     return @
+
+  back: ->
+    window.location.hash = ''
 
 
 Handlebars.registerHelper 'prettyDistance', (distance) ->
@@ -109,3 +116,5 @@ $ ->
       BABS.app.noLocation()  
   else
     BABS.app.noLocation()
+
+  FastClick.attach document.body
